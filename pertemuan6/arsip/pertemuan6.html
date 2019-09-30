@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pertemuan6</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="arsip-file-dan-sistem-kompresi.">Arsip File dan Sistem Kompresi.</h1>
+<p><img src="https://lh3.googleusercontent.com/ZqdqUleRQuzB3R2mXrMjdR6uNA6cvvYuDxjFimGwaTAiCY8-IhcpFPhciL7cnrYBuAkiDRRgmvXCig" alt="Contoh Arsip"></p>
+<h2 id="first-things-first">First Things First</h2>
+<ol>
+<li>Angkat tangan jika penjelasan terlalu cepat</li>
+<li>Mari membuat suasana praktikkum yang kondusif</li>
+<li>Aktiflah bertanya agar tidak bingung di kemudian hari</li>
+</ol>
+<h2 id="sebelum-dimulai...">Sebelum dimulai…</h2>
+<ol>
+<li>Arsip adalah ?</li>
+<li>Kompresi adalah ?</li>
+<li>Arsip dan Kompresi di Linux.</li>
+<li>Tar, gzip, bzip2 dan zip.</li>
+</ol>
+<h2 id="praktikkum-dimulai..">Praktikkum Dimulai…</h2>
+<ol>
+<li>
+<p>Mempersiapkan file untuk praktek</p>
+<ul>
+<li><code>$ pwd /home/badu</code></li>
+<li><code>$ mkdir arsip</code></li>
+<li><code>$ cd arsip</code></li>
+<li><code>$ cp /etc/*.conf .</code></li>
+<li><code>$ ls -l</code></li>
+</ul>
+</li>
+<li>
+<p>Membuat arsip baru</p>
+<ul>
+<li><code>$ tar -cvf conf.tar *.conf</code></li>
+<li><code>$ ls -l conf.tar</code></li>
+</ul>
+</li>
+<li>
+<p>Melihat isi file arsip</p>
+<ul>
+<li><code>$ tar -tvf conf.tar</code></li>
+</ul>
+</li>
+<li>
+<p>Mengekstrak file arsip</p>
+<ul>
+<li><code>$ rm *.conf</code></li>
+<li><code>$ ls -l</code></li>
+<li><code>$ tar -xvf conf.tar</code></li>
+<li><code>$ ls -l</code></li>
+</ul>
+</li>
+<li>
+<p>Mengarsip dan mengkompresi file dengan tar dan gzip secara terpisah (perhatikan ukuran file sebelum dan sesudah dikompres)</p>
+</li>
+</ol>
+<ul>
+<li><code>$ ls -l conf.tar</code></li>
+<li><code>$ gzip conf.tar</code></li>
+<li><code>$ ls -l conf*</code></li>
+</ul>
+<ol start="6">
+<li>Mengarsip dan mengkompresi file dengan tar dan bzip2 secara terpisah (perhatikan ukuran file sebelum dan sesudah dikompres)</li>
+</ol>
+<ul>
+<li><code>$ tar -cvf conf.tar *.conf</code></li>
+<li><code>$ ls -l conf*</code></li>
+<li><code>$ bzip2 conf.tar</code></li>
+<li><code>$ ls -l conf*</code></li>
+</ul>
+<ol start="7">
+<li>Medekompresi file</li>
+</ol>
+<ul>
+<li><code>$ gzip -d conf.tar.gz</code></li>
+<li><code>$ bzip2 -d conf.tar.bz2</code></li>
+</ul>
+<ol start="8">
+<li>Mengarsip dan mengkompresi file dengan tar dan gzip secara bersamaan</li>
+</ol>
+<ul>
+<li><code>$ tar -czvf config.tar.gz *.conf</code></li>
+<li><code>$ ls -l conf*</code></li>
+</ul>
+<ol start="9">
+<li>Mengarsip dan mengkompresi file dengan tar dan bzip2 secara bersamaan</li>
+</ol>
+<ul>
+<li><code>$ tar -cjvf config.tar.bz2 *.conf</code></li>
+<li><code>$ ls -l conf*</code></li>
+</ul>
+<ol start="10">
+<li>Mengarsip dan mengkompresi file dengan zip</li>
+</ol>
+<ul>
+<li><code>$ zip conf *.conf</code></li>
+<li><code>$ ls -l conf*</code></li>
+</ul>
+<p>Perhatikan ukuran file hasil kompresi gzip, bzip2 dan zip nya. Manakah hasil kompresinya yang paling kecil?</p>
+<ol start="11">
+<li>Mengekstrak file arsip yang terkompresi</li>
+</ol>
+<ul>
+<li><code>$ rm *.conf $ tar -xvf conf.tar.gz</code></li>
+<li><code>$ ls -l</code></li>
+<li><code>$ rm *.conf</code></li>
+<li><code>$ tar -xvf conf.tar.bz2</code></li>
+<li><code>$ ls -l</code></li>
+<li><code>$ rm *.conf</code></li>
+<li><code>$ unzip conf.zip</code></li>
+<li><code>$ ls -l</code></li>
+</ul>
+<h2 id="selesai.">Selesai.</h2>
+<p><strong>Ada Pertanyaan ???</strong></p>
+</div>
+</body>
+
+</html>

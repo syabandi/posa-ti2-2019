@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 1 - Instalasi Linux</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="instalasi-linux-dengan-metode-dual-boot.">Instalasi Linux dengan Metode Dual Boot.</h1>
+<p><img src="https://wallpaperaccess.com/full/981853.png" alt="wallpaper access"></p>
+<h2 id="first-things-first">First Things First</h2>
+<ol>
+<li>Angkat tangan jika penjelasan terlalu cepat</li>
+<li>Mari membuat suasana praktikkum yang kondusif</li>
+<li>Aktiflah bertanya agar tidak bingung di kemudian hari</li>
+</ol>
+<h2 id="sebelum-dimulai...">Sebelum dimulai…</h2>
+<ul>
+<li></li>
+</ul>
+<h3 id="alat-yang-diperlukan">Alat yang diperlukan</h3>
+<ol>
+<li>Siapkan FlashDisk kosong berkapasitas min. 8GB</li>
+<li>Install software <strong>PowerISO</strong></li>
+<li>Install Software <strong>Minitool Partition Wizard</strong></li>
+<li>Ubuntu 18.04 ISO</li>
+<li>Siapkan peniti/sim ejector untuk laptop tertentu masuk recovery mode</li>
+<li>Pastikan Baterai Laptop diatas 50% / Terhubung dengan power adapter</li>
+</ol>
+<h2 id="siap-siap-dulu-yuk..">Siap-siap dulu yuk…</h2>
+<h4 id="matikan-opsi-fast-startup-di-windows-8--10.">Matikan opsi fast startup di Windows 8 / 10.</h4>
+<ol>
+<li>
+<p>Klik kanan pada ikon battery lalu pilih <strong>Power Options</strong><br>
+<img src="https://lh3.googleusercontent.com/JAmfzVmFNYRRBChejc1pEyJeUPeufdo5lZBSbkPalXSMP4WKNzg17I0hGQe2x4VZqJ-HyoTIf45Uag" alt="Windows 10 Battery"></p>
+</li>
+<li>
+<p>Klik “Choose what the power buttons do”<br>
+<img src="https://lh3.googleusercontent.com/X4qAVMyao2Lx8VxirLgzE3kITZ531mMB_Lr4QQLPlRnOzVBNSOHZalD9Kgv4HXpjezkrSHm_A3TYVw" alt="poweroptions"></p>
+</li>
+<li>
+<p>Scroll down ke “Shutdown settings” dan uncheck pada tulisan “Turn on fast startup”.<br>
+<em>Note: Jika tulisan kotak ini belum bisa di uncheck maka kita harus klik “Change settings that are currently unavailable”.</em><br>
+<img src="https://lh3.googleusercontent.com/b1Mtp1mINcLpXMj_e5gXMfVDp2nKCl3qewXidkXpWLDvBrGGL4R_FXk6RPe-MAGS4hRQktUx6gT3kQ" alt="powerbutton"></p>
+</li>
+<li>
+<p>Klik “Save Changes”</p>
+</li>
+</ol>
+<h4 id="membuat-partisi-untuk-linux-dan-swap.">Membuat Partisi Untuk Linux dan Swap.</h4>
+<ol>
+<li>
+<p>Buka aplikasi MiniTool Partition Wizard, Pilih Launch Application.<br>
+Pilih partisi yang akan di split untuk penyimpanan Linux dan Swap. Lalu klik <strong>split partition</strong> -&gt; <strong>split</strong><br>
+<img src="https://lh3.googleusercontent.com/7j3SJNMzShZ7hzyV_ZLeSXT96IEcyieiADSjbQHYYwJf9dmsuC38p6jZ_7F-T9-wDzAc_FnJXnlC6w" alt="split1"></p>
+</li>
+<li>
+<p>Drag Slider nya untuk menentukan besarnya penyimpanan Linux. Klik OK jika sudah selesai. <strong>Note :</strong> <em>Rekomendasi dari saya, 25GB untuk Linux &amp; 3GB untuk Swap</em><br>
+<img src="https://lh3.googleusercontent.com/3tTT6jvwjrHBevNFSSdJxUnK5ZT7TohUQ1D5IpAdZ6eLO2bCG_wXYPVOvW2Sghl4XlFST3CWN_A9UQ" alt="split2"></p>
+</li>
+<li>
+<p>Kembali ke tampilan awal dan klik <strong>Apply</strong> untuk membuat partisi yang diinginkan. Tunggu Prosesnya.<br>
+<img src="https://lh3.googleusercontent.com/41NvEm5bvAy8s57B75Yun_YR043roAMqZ5L2rRdq94k2PYLalcaGOOYEe1rSS5-1eqm__tu6iy2jqQ" alt="split3"></p>
+</li>
+</ol>
+<h4 id="membuat-bootable-flash-disk-sebagai-sumber-instalasi-linux.">Membuat bootable Flash Disk sebagai sumber instalasi Linux.</h4>
+<ol>
+<li>Buka Aplikasi PowerISO, Pastikan FD sudah di backup &amp; sudah terbaca oleh komputer. Klik Tools -&gt; “Create bootable USB Drive”</li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/Ybwoz0khZ-8YanUArorXd9TARAmhocOZ-ndtzVEflnEsKWVB2Th9WXC6gp_EKwTt6VsoyleYmI8V1g" alt="setup1"></p>
+<p>Klik OK<img src="https://lh3.googleusercontent.com/u9jt3ftrFlXqyUyr6xZbizB1IEtg7C_GEcyE5dHKzMyi9Ix75Gt9_Q0IjlBYPRz4sZOggZmXTo1S1g" alt="setup2"></p>
+<ol start="2">
+<li>
+<p>Klik gambar folder pada pilihan <strong>Image File</strong>, cari letak file ISO Ubuntu, lalu pilih. Pastikan <strong>Image File</strong> berisi lokasi dari file ISO Ubuntu</p>
+</li>
+<li>
+<p>Untuk <strong>Destination USB Drive</strong> pastikan kita telah memilih FlashDisk yang sudah disiapkan<br>
+<img src="https://lh3.googleusercontent.com/rjCxJs937m3PptGEi0GWVcp7C9brZ82pkYonHz-MR53wUFI7gB_kZWXPg0pCp0EbGU8e4dvUO0lDyw" alt="setup3"></p>
+</li>
+<li>
+<p>Klik Start untuk memulai proses pembuatan bootable FlashDisk.</p>
+</li>
+<li>
+<p>Akan muncul peringatan dari PowerISO, pastikan kembali bahwa yang muncul adalah FD yang sudah disiapkan.<br>
+<img src="https://lh3.googleusercontent.com/xERMZfZGH7yviXeIEtfY2w5c8xQSN4GWOi2w7gk4ZwifTXewztmJtPsSfVoJz1NSHQgC1mWG3sNRtA" alt="setup4"></p>
+</li>
+</ol>
+<ul>
+<li>PowerISO akan mulai membuat Bootable USB, dan menunjukkan progress &amp; estimasi waktu penulisan data. Nantinya akan muncul popup message “Writing USB drive completed successfully.” setelah prosesnya selesai.<br>
+<img src="https://lh3.googleusercontent.com/ZXCkbZyr2T2tHSLHcXmSKJXEY_-Zwc6FTAFMT7cpbcjptFsdrbual-3tDAEfu1dnz_5tSf3iv3q1Pg" alt="setup5"></li>
+</ul>
+<ol start="6">
+<li>Jika tidak muncul pesan error, maka proses yang dilakukan telah berhasil. Maka kita sudah siap untuk <strong>Install Linux</strong><br>
+<img src="https://lh3.googleusercontent.com/n4d8X-657o4LwEoJ1e3Pf9Qlw80F-gQ3tGh-Sv46YLh6OafPysividVni9i7RZ3MxO9mLpxZWRpqaQ" alt="setup6"></li>
+</ol>
+<h2 id="proses-persiapan-selesai.-ada-pertanyaan-">Proses Persiapan Selesai. Ada Pertanyaan ???</h2>
+<blockquote>
+<h3 id="shutdown-your-computer-ladies-and-gentleman.-get-ready-to-start-entering-the-world-of-linux">Shutdown your computer Ladies and Gentleman. Get ready to start entering the world of linux</h3>
+</blockquote>
+<p>Mari kita mulai <a href="https://azmifaiz.github.io/posa-ti2-2019/pertemuan1/install.html"><strong>Install Linux nya !!!</strong></a></p>
+</div>
+</body>
+
+</html>
