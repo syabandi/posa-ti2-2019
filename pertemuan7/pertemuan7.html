@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pertemuan7</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="pemrosesan-file-teks.">Pemrosesan File Teks.</h1>
+<p><img src="https://lh3.googleusercontent.com/siNVJM1PibUffX3uqR1VT04bW8Wvp1OE-5mj3cWgBRjgb1nIFqniF2-A3EDjFZm81utV3Iu5NcN7NQ" alt="guru99.com pictures"></p>
+<h2 id="first-things-first">First Things First</h2>
+<ol>
+<li>Angkat tangan jika penjelasan terlalu cepat</li>
+<li>Mari membuat suasana praktikkum yang kondusif</li>
+<li>Aktiflah bertanya agar tidak bingung di kemudian hari</li>
+</ol>
+<h2 id="sebelum-dimulai...">Sebelum dimulai…</h2>
+<ol>
+<li><a href="https://www.guru99.com/linux-pipe-grep.html">Ayo baca dulu sebentar</a></li>
+<li>Beberapa tool atau perintah yang dapat digunakan untuk memanipulasi file teks :
+<ul>
+<li>cat ­- concatenate</li>
+<li>more dan less</li>
+<li>head dan tail</li>
+<li>wc – word count</li>
+<li>cut</li>
+<li>sort</li>
+<li>tr ­ - translate</li>
+<li>sed – stream editor</li>
+<li>grep – global regular expression print</li>
+<li>find</li>
+</ul>
+</li>
+</ol>
+<h2 id="praktikum-dimulai..">Praktikum dimulai…</h2>
+<ol>
+<li>
+<p>Menggunakan perintah cat</p>
+<ul>
+<li>$ <code>cat &gt; latihan</code><br>
+Saya sedang belajar Linux<br>
+{Ctrl}+D</li>
+<li><code>$ cat latihan</code></li>
+<li><code>$ cat &gt;&gt; latihan</code><br>
+Distro Linux yang dipelajari adalah ubuntu<br>
+{Ctrl}+D</li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah more dan less</p>
+<ul>
+<li><code>$ more /etc/passwd</code></li>
+<li><code>$ ls -l /etc | more</code></li>
+<li><code>$ less /etc/passwd</code></li>
+<li><code>$ ls -l /etc | less</code></li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah head dan tail</p>
+<ul>
+<li><code>$ head /etc/passwd</code></li>
+<li><code>$ head -n5 /etc/passwd</code></li>
+<li><code>$ tail /etc/passwd</code></li>
+<li><code>$ tail -n5 /etc/passwd</code></li>
+<li><code>$ tail -n+5 /etc/passwd</code></li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah wc</p>
+<ul>
+<li><code>$ wc /etc/passwd</code></li>
+<li><code>$ wc -l /etc/passwd</code></li>
+<li><code>$ wc -w /etc/passwd</code></li>
+<li><code>$ wc -c /etc/passwd</code></li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah cut</p>
+<ul>
+<li><code>$ cut -d":" -f1-4 /etc/passwd</code></li>
+<li><code>$ cut -d":" -f1,4 /etc/passwd</code></li>
+<li><code>$ cut -c1-4 /etc/passwd</code></li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah sort</p>
+<ul>
+<li><code>$ sort /etc/passwd</code></li>
+<li><code>$ sort -t":" -k3 /etc/passwd</code></li>
+<li><code>$ sort -t":" -k3 -n /etc/passwd</code></li>
+<li><code>$ sort -t":" -k3 -nr /etc/passwd</code></li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah tr</p>
+<ul>
+<li><code>$ tr abc ABC &lt; /etc/passwd</code></li>
+<li><code>$ tr a-z A-Z &lt; /etc/passwd</code></li>
+<li><code>$ tr -d aiueo &lt; /etc/passwd</code></li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah sed</p>
+<ul>
+<li><code>$ sed -e "s/root/badu/g" /etc/passwd</code></li>
+<li><code>$ echo "s/root/badu/g" &gt; skrip</code></li>
+<li><code>$ sed -f skrip /etc/passwd</code></li>
+</ul>
+</li>
+<li>
+<p>Menggunakan perintah grep</p>
+</li>
+</ol>
+<ul>
+<li><code>$ grep root /etc/passwd</code></li>
+<li><code>$ grep echo *</code></li>
+</ul>
+<ol start="10">
+<li>Menggunakan perintah find
+<ul>
+<li><code>$ find . -name "latih*"</code></li>
+<li><code>$ find . -name "latih*" -perm 644</code></li>
+<li><code>$ find . -name "latih*" -perm 644 -user dudi</code></li>
+<li><code>$ find . -name "latih*" -perm 644 -exec rm -i {} \;</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="selesai.">Selesai.</h2>
+<p><strong>Ada Pertanyaan ???</strong></p>
+</div>
+</body>
+
+</html>
